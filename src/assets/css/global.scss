@@ -1,0 +1,182 @@
+// $logo-background: #E2C9BE;
+// $logo-letter: #FBF7E9;
+
+$background: #fbead3;
+$main: #a31780;
+$secondary: #6f347c;
+$accent: #13cad1;
+
+body {
+    font-family: "Montserrat";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    background-color: #fbead3;
+}
+
+.main-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    
+
+    .navbar {
+        font-weight: 500;
+        .container-fluid {
+            .navbar-collapse {
+                flex-grow: unset;
+
+                button.contact-me {
+                    background-color: $main;
+                    color: #ffffff;
+                    font-weight: 500;
+                    border: 0;
+                    padding: .5rem 1rem;
+                }
+            }
+        }
+    }
+
+    .container {
+        // border: 1px solid red;
+
+        .main-heading {
+            position: relative;
+
+            h1 {
+                font-family: 'Monoton', cursive;
+                margin-top: 10rem;
+                // color: #4c4c4c;
+                color: $main;
+            }
+
+            h3 {
+                color: $accent;
+            }
+
+            .watermark-container {
+                .watermark {
+                    position: absolute;
+                    border: 3px solid $main;
+                    opacity: .1;
+                    border-radius: 50%;
+                }
+
+                .watermark-1 {
+                    height: 20rem;
+                    width: 20rem;
+                    right: -30%;
+                    top: 20%;
+                }
+
+                .watermark-2 {
+                    height: 12rem;
+                    width: 12rem;
+                    right: 23%;
+                    top: 35%;
+                    border: 3px solid $secondary;
+                }
+
+                .watermark-3 {
+                    height: 15rem;
+                    width: 15rem;
+                    right: 30%;
+                    top: 73%;
+                    border: 3px solid $accent;
+                }
+            }
+
+            h1 {
+                animation: 2s translatefirst 1s;
+            }
+    
+            h3 {
+                animation: 2s translatefirst 1.2s;
+            }
+        }
+
+        svg.bi-arrow-down {
+            animation: 2s translatesecond 1.4s;
+            margin-left: -12px;
+            fill: $secondary;
+            transition: transform 1s;
+
+            &:hover {
+                transform: scale(1.5) translateY(5px);
+                // transform: ;
+            }
+        }
+
+        @keyframes translatefirst {
+            0% {
+                transform: translate(calc(10% - 100vw));
+            }
+            100% {
+                transform: translate(0px);
+            }
+        }
+
+        @keyframes translatesecond {
+            0% {
+                transform: translate(calc(100% - 100vw));
+            }
+            100% {
+                transform: translate(0px);
+            }
+        }
+
+        h3.work-heading {
+            margin: 32rem 0 1rem 0rem;
+        }
+
+        #projects {
+            .each-project {
+                position: relative;
+
+                &:hover {
+                    cursor: pointer;
+
+                    & .overlay {
+                        display: flex;
+                    }
+                }
+                
+                
+            }
+
+            
+            .overlay {
+                display: none;
+                position: absolute;
+                background-color: white;
+                bottom: 0;
+                height: 90%;
+                width: 80%;
+                border-radius: 12px;
+                margin: 0 auto;
+                opacity: .7;
+
+                .project-btn {
+                    background-color: $main;
+                    border: none;
+                    color: $background;
+                    font-weight: 500;
+                    padding: .25rem 1rem;
+                    opacity: 1;
+                }
+            }
+
+            img {
+                width: 80%;
+                height: auto;
+                border-radius: 12px;
+                margin: 0 auto;
+
+                &:hover {
+                    
+                }
+            }   
+        }
+    }
+}
+
+
