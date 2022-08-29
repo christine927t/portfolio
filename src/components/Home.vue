@@ -41,7 +41,6 @@
         </div>
         <div id="#experience">
             <h3>A bit about my experience...</h3>
-
         </div>
     </div>
 </template>
